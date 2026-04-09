@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoneyFlow - Delete Account</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#F8F8FA;line-height:1.7}
+.header{background:linear-gradient(135deg,#3E277A,#6A4BBC);padding:40px 24px;text-align:center;color:#fff}
+.header h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.header p{opacity:.8;font-size:14px}
+.container{max-width:720px;margin:0 auto;padding:32px 20px 60px}
+h2{font-size:20px;font-weight:700;color:#3E277A;margin:28px 0 12px}
+p{margin-bottom:12px;color:#444;font-size:15px}
+.step{background:#fff;border-radius:16px;padding:20px;margin:12px 0;box-shadow:0 2px 8px rgba(0,0,0,.04);display:flex;gap:16px;align-items:flex-start}
+.step-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#3E277A,#6A4BBC);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.step-content{flex:1}
+.step-title{font-weight:700;font-size:15px;margin-bottom:4px}
+.step-desc{color:#666;font-size:14px}
+.warn{background:#FFF3E0;border-left:4px solid #E65100;padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0}
+.warn p{color:#E65100;margin-bottom:0}
+a{color:#6A4BBC;text-decoration:none;font-weight:500}
+.email-btn{display:inline-block;background:linear-gradient(135deg,#3E277A,#6A4BBC);color:#fff;padding:14px 28px;border-radius:14px;font-weight:700;font-size:16px;margin-top:16px;text-decoration:none}
+.footer{text-align:center;padding:32px 20px;color:#999;font-size:13px;border-top:1px solid #eee;margin-top:40px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>MoneyFlow</h1>
+<p>Account & Data Deletion</p>
+</div>
+<div class="container">
+
+<h2>How to Delete Your Account</h2>
+<p>You have full control over your data. Follow these steps to completely remove your account and all associated information.</p>
+
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-content">
+<div class="step-title">Clear App Data</div>
+<div class="step-desc">Open MoneyFlow → Settings → tap "Clear All Data". This permanently deletes all transactions, budgets, splits, and recurring bills from your device.</div>
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-content">
+<div class="step-title">Uninstall the App</div>
+<div class="step-desc">Uninstall MoneyFlow from your phone. This removes all remaining local data, cached files, and app preferences.</div>
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-content">
+<div class="step-title">Request Authentication Deletion</div>
+<div class="step-desc">To remove your phone number from Firebase Authentication, send us an email with the subject "Account Deletion Request" and include your registered phone number.</div>
+</div>
+</div>
+
+<div style="text-align:center;margin:24px 0">
+<a href="mailto:vksnitian@gmail.com?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20MoneyFlow%20account.%0A%0ARegistered%20Phone%20Number%3A%20%2B91%20" class="email-btn">📧 Send Deletion Request</a>
+</div>
+
+<div class="warn">
+<p>⚠️ <strong>Important:</strong> Account deletion is permanent and cannot be undone. All your transaction history will be lost. We recommend exporting a PDF statement from the app before deleting.</p>
+</div>
+
+<h2>What Gets Deleted</h2>
+
+<div class="step">
+<div class="step-num">✓</div>
+<div class="step-content">
+<div class="step-title">Local Data (Immediate)</div>
+<div class="step-desc">All transactions, budgets, splits, recurring bills, and settings are deleted immediately when you clear app data or uninstall.</div>
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">✓</div>
+<div class="step-content">
+<div class="step-title">Authentication Record (Within 48 hours)</div>
+<div class="step-desc">Your phone number will be removed from Firebase Authentication within 48 hours of receiving your deletion request email.</div>
+</div>
+</div>
+
+<div class="step">
+<div class="step-num">✓</div>
+<div class="step-content">
+<div class="step-title">SMS Data</div>
+<div class="step-desc">MoneyFlow never stores or uploads raw SMS data. Parsed transaction data is stored only on your device and is removed with uninstallation.</div>
+</div>
+</div>
+
+<h2>Questions?</h2>
+<p>If you have any concerns about your data, contact us at <a href="mailto:vksnitian@gmail.com">vksnitian@gmail.com</a></p>
+
+<div class="footer">
+<p>© 2026 VKS Tech. All rights reserved.</p>
+<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></p>
+</div>
+</div>
+</body>
+</html>

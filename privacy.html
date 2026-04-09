@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoneyFlow - Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;color:#1a1a1a;background:#F8F8FA;line-height:1.7}
+.header{background:linear-gradient(135deg,#3E277A,#6A4BBC);padding:40px 24px;text-align:center;color:#fff}
+.header img{width:64px;height:64px;border-radius:16px;margin-bottom:12px}
+.header h1{font-size:28px;font-weight:700;margin-bottom:4px}
+.header p{opacity:.8;font-size:14px}
+.container{max-width:720px;margin:0 auto;padding:32px 20px 60px}
+h2{font-size:20px;font-weight:700;color:#3E277A;margin:32px 0 12px;padding-top:16px;border-top:1px solid #eee}
+h2:first-of-type{border-top:none;margin-top:0}
+h3{font-size:16px;font-weight:600;color:#1a1a1a;margin:20px 0 8px}
+p{margin-bottom:12px;color:#444;font-size:15px}
+.highlight{background:#EDE7F6;border-left:4px solid #3E277A;padding:16px 20px;border-radius:0 12px 12px 0;margin:16px 0}
+.highlight p{margin-bottom:0;color:#3E277A;font-weight:500}
+.sms-box{background:#fff;border:1px solid #E0E0E0;border-radius:16px;padding:20px;margin:16px 0}
+.sms-box h4{font-size:14px;font-weight:700;color:#E65100;margin-bottom:8px}
+.check{color:#2E7D32;font-weight:600}
+.cross{color:#E53935;font-weight:600}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+table th{background:#3E277A;color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+table td{padding:10px 14px;border-bottom:1px solid #eee}
+table tr:nth-child(even){background:#F8F8FA}
+.footer{text-align:center;padding:32px 20px;color:#999;font-size:13px;border-top:1px solid #eee;margin-top:40px}
+.footer img{width:40px;height:40px;border-radius:50%;margin-bottom:8px}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin:2px}
+.badge-green{background:#E8F5E9;color:#2E7D32}
+.badge-red{background:#FFEBEE;color:#C62828}
+.badge-blue{background:#E3F2FD;color:#1565C0}
+ul{margin:8px 0 16px 20px}
+li{margin-bottom:6px;color:#444;font-size:15px}
+a{color:#6A4BBC;text-decoration:none;font-weight:500}
+a:hover{text-decoration:underline}
+.last-updated{text-align:center;color:#999;font-size:13px;margin-top:8px}
+</style>
+</head>
+<body>
+
+<div class="header">
+<img src="assets/icon.jpeg" alt="MoneyFlow" onerror="this.style.display='none'">
+<h1>MoneyFlow</h1>
+<p>Privacy Policy</p>
+</div>
+
+<div class="container">
+
+<p class="last-updated">Last updated: April 9, 2026</p>
+
+<h2>1. Overview</h2>
+<p>MoneyFlow ("we", "our", "the app") is a personal finance tracking application developed and operated by <strong>VKS Tech</strong>. This privacy policy explains how MoneyFlow collects, uses, and protects your information.</p>
+
+<div class="highlight">
+<p>🔒 MoneyFlow is designed with a privacy-first approach. Your financial data stays on your device. We do not upload, sell, or share your SMS data or transaction history with any third party.</p>
+</div>
+
+<h2>2. Information We Collect</h2>
+
+<h3>2.1 Phone Number (for Authentication)</h3>
+<p>We collect your phone number solely for login verification via Firebase Authentication (Google). An OTP is sent to verify your identity. We do not use your phone number for marketing, sharing with third parties, or any purpose other than authentication.</p>
+
+<h3>2.2 SMS Messages (for Transaction Tracking)</h3>
+
+<div class="sms-box">
+<h4>⚠️ SMS Permission Disclosure (Google Play Requirement)</h4>
+<p>MoneyFlow requests the <strong>READ_SMS</strong> and <strong>RECEIVE_SMS</strong> permissions to provide its core functionality: automatic expense and income tracking from bank transaction SMS messages.</p>
+</div>
+
+<p><strong>What we read:</strong></p>
+<table>
+<tr><th>We Read</th><th>We Do NOT Read</th></tr>
+<tr><td>Bank transaction SMS (debit/credit alerts)</td><td>Personal messages from contacts</td></tr>
+<tr><td>UPI payment confirmations</td><td>OTP messages from other apps</td></tr>
+<tr><td>Credit card transaction alerts</td><td>Promotional/marketing SMS</td></tr>
+<tr><td>Wallet notifications (Paytm, PhonePe, etc.)</td><td>Social media notifications</td></tr>
+</table>
+
+<p><strong>How SMS data is processed:</strong></p>
+<ul>
+<li>SMS messages are filtered on-device to identify only bank/financial messages</li>
+<li>Transaction details (amount, merchant, date, account) are extracted on-device</li>
+<li>The parsed data is stored locally on your device only</li>
+<li>Raw SMS content is never stored, uploaded, or transmitted to any server</li>
+<li>SMS processing happens entirely on your phone — no cloud processing</li>
+</ul>
+
+<div class="highlight">
+<p>✅ SMS data NEVER leaves your device. All parsing and storage happens locally. We have zero access to your messages.</p>
+</div>
+
+<h3>2.3 Financial Data (User-Created)</h3>
+<p>When you manually add transactions, budgets, splits, or recurring bills, this data is stored locally on your device using secure on-device storage. This data is not uploaded to any server.</p>
+
+<h3>2.4 Data We Do NOT Collect</h3>
+<ul>
+<li><span class="cross">✗</span> We do NOT collect your name, email, or address</li>
+<li><span class="cross">✗</span> We do NOT collect your bank account numbers or card numbers</li>
+<li><span class="cross">✗</span> We do NOT collect your location data</li>
+<li><span class="cross">✗</span> We do NOT upload your SMS to any server</li>
+<li><span class="cross">✗</span> We do NOT track your browsing activity</li>
+<li><span class="cross">✗</span> We do NOT use any analytics or tracking SDKs</li>
+<li><span class="cross">✗</span> We do NOT serve ads or share data with advertisers</li>
+</ul>
+
+<h2>3. How We Use Your Information</h2>
+
+<table>
+<tr><th>Data</th><th>Purpose</th><th>Stored Where</th></tr>
+<tr><td>Phone Number</td><td>Login authentication only</td><td>Firebase (Google servers)</td></tr>
+<tr><td>Bank SMS</td><td>Auto-detect transactions</td><td>On-device only (never uploaded)</td></tr>
+<tr><td>Transaction Data</td><td>Expense tracking, budgets, reports</td><td>On-device only</td></tr>
+<tr><td>Budget Settings</td><td>Budget tracking</td><td>On-device only</td></tr>
+</table>
+
+<h2>4. Data Storage & Security</h2>
+
+<h3>4.1 On-Device Storage</h3>
+<p>All financial data (transactions, budgets, splits, recurring bills) is stored locally on your device using Android's secure application storage (AsyncStorage). This data is sandboxed — other apps cannot access it.</p>
+
+<h3>4.2 Firebase Authentication</h3>
+<p>We use Google Firebase Authentication for phone number verification. Firebase stores your phone number on Google's secure servers solely for authentication purposes. Firebase's privacy policy applies: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
+
+<h3>4.3 No Cloud Sync</h3>
+<p>MoneyFlow does not sync your data to any cloud server. If you uninstall the app or clear app data, your transaction history will be permanently deleted from the device.</p>
+
+<h2>5. SMS Permission Justification</h2>
+
+<p>MoneyFlow's core functionality is <strong>automatic expense tracking from bank SMS messages</strong>. This is the primary and only reason we request SMS permissions.</p>
+
+<h3>Why SMS permission is necessary:</h3>
+<ul>
+<li><strong>READ_SMS</strong> — To scan existing bank messages and import past transactions when the user first enables the feature</li>
+<li><strong>RECEIVE_SMS</strong> — To detect new bank transaction messages in real-time and automatically log them as they arrive</li>
+</ul>
+
+<h3>How we ensure responsible use:</h3>
+<ul>
+<li>Users must explicitly grant permission — it's not required to use the app</li>
+<li>Only messages matching bank/financial patterns are processed</li>
+<li>Personal messages are completely ignored and never read</li>
+<li>All processing happens on-device — no server communication</li>
+<li>Users can revoke permission at any time from Android Settings</li>
+<li>The app functions normally without SMS permission (manual entry mode)</li>
+</ul>
+
+<h2>6. Third-Party Services</h2>
+
+<p>MoneyFlow uses the following third-party services:</p>
+
+<table>
+<tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+<tr><td>Firebase Authentication (Google)</td><td>Phone number login</td><td>Phone number only</td></tr>
+</table>
+
+<p>We do not use any advertising SDKs, analytics tools, crash reporting services, or data brokers.</p>
+
+<h2>7. Data Sharing</h2>
+
+<div class="highlight">
+<p>We do NOT sell, share, rent, or trade your personal information or financial data with any third party, under any circumstances.</p>
+</div>
+
+<p>Your data may only be disclosed if:</p>
+<ul>
+<li>Required by law or a valid court order</li>
+<li>Necessary to protect the safety of users or the public</li>
+</ul>
+
+<h2>8. Your Rights & Controls</h2>
+
+<p>You have full control over your data:</p>
+
+<ul>
+<li><strong>Revoke SMS Permission</strong> — Go to Android Settings → Apps → MoneyFlow → Permissions → disable SMS. The app will continue to work in manual mode.</li>
+<li><strong>Delete All Data</strong> — Use the "Clear All Data" button in the app's Settings screen to permanently delete all transactions and financial data.</li>
+<li><strong>Delete Account</strong> — Uninstalling the app removes all locally stored data. To delete your Firebase authentication record, contact us at the email below.</li>
+<li><strong>Export Data</strong> — Use the "Export Statement" feature to download a PDF of your transaction history before deleting.</li>
+</ul>
+
+<h2>9. Children's Privacy</h2>
+
+<p>MoneyFlow is not intended for use by children under the age of 18. We do not knowingly collect information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+
+<h2>10. Data Retention</h2>
+
+<ul>
+<li><strong>On-device data:</strong> Retained until you delete it or uninstall the app</li>
+<li><strong>Firebase auth data:</strong> Retained until account deletion is requested</li>
+<li><strong>SMS data:</strong> Raw SMS content is never stored. Only parsed transaction details are kept on-device.</li>
+</ul>
+
+<h2>11. Changes to This Policy</h2>
+
+<p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+<h2>12. Contact Us</h2>
+
+<p>If you have any questions, concerns, or requests regarding this privacy policy or your data, please contact us:</p>
+
+<div class="sms-box">
+<p><strong>VKS Tech</strong></p>
+<p>Email: <a href="mailto:vksnitian@gmail.com">vksnitian@gmail.com</a></p>
+<p>Website: <a href="https://moneyflow.vkstech.com">moneyflow.vkstech.com</a></p>
+<p>Developer: Vivek Kumar</p>
+</div>
+
+<div class="footer">
+<p>© 2026 VKS Tech. All rights reserved.</p>
+<p style="margin-top:8px">MoneyFlow — Track every rupee, effortlessly.</p>
+</div>
+
+</div>
+</body>
+</html>
