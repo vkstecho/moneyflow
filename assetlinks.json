@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.vkstech.moneyflow",
+        "sha256_cert_fingerprints": ["30:60:A9:80:CF:C5:2C:29:F2:CD:48:59:45:8F:00:F9:89:99:DB:63:10:48:E5:BB:48:66:98:5E:D4:3A:4E:F6"]
+      }
+    }]
