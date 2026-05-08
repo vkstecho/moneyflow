@@ -1,8 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.vkstech.moneyflow",
-    "sha256_cert_fingerprints": ["30:60:A9:80:CF:C5:2C:29:F2:CD:48:59:45:8F:00:F9:89:99:DB:63:10:48:E5:BB:48:66:98:5E:D4:3A:4E:F6"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.vkstech.moneyflow",
+      "sha256_cert_fingerprints": [
+        "C6:0E:5C:8A:3E:07:8C:C9:A3:EA:E9:2F:D8:96:2B:F7:86:B3:1C:B2:E3:EF:CB:11:DB:66:C0:1B:1D:78:88:53"
+      ]
+    }
   }
-}]
+]
