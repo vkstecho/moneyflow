@@ -1,0 +1,73 @@
+{
+  "id": "/?source=pwa",
+  "name": "MoneyFlow - Your Money, Your Control",
+  "short_name": "MoneyFlow",
+  "description": "Personal finance tracker with smart categorization. Your Money, Your Control.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F0F0F0",
+  "theme_color": "#3E277A",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["finance", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "share_target": {
+    "action": "/?share=1",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "shortcuts": [
+    {
+      "name": "Add Expense",
+      "short_name": "Expense",
+      "description": "Quickly add a new expense",
+      "url": "/?action=expense"
+    },
+    {
+      "name": "Add Income",
+      "short_name": "Income",
+      "description": "Quickly add income",
+      "url": "/?action=income"
+    },
+    {
+      "name": "View Reports",
+      "short_name": "Reports",
+      "description": "View spending reports",
+      "url": "/?action=reports"
+    }
+  ],
+  "prefer_related_applications": false
+}
