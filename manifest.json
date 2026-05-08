@@ -1,7 +1,8 @@
 {
-  "name": "MoneyFlow - Track Every Rupee",
+  "id": "/?source=pwa",
+  "name": "MoneyFlow - Your Money, Your Control",
   "short_name": "MoneyFlow",
-  "description": "Personal finance tracker with auto SMS expense detection. Track every rupee, effortlessly.",
+  "description": "Personal finance tracker with smart categorization. Your Money, Your Control.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -13,32 +14,53 @@
   "categories": ["finance", "productivity", "utilities"],
   "icons": [
     {
-      "src": "assets/icon.jpeg",
+      "src": "assets/icon-192.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "assets/icon.jpeg",
+      "src": "assets/icon-512.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "assets/icon.jpeg",
+      "src": "assets/screenshot.png",
       "sizes": "540x720",
-      "type": "image/jpeg",
+      "type": "image/png",
       "form_factor": "narrow"
     }
   ],
+  "share_target": {
+    "action": "/?share=1",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
   "shortcuts": [
     {
       "name": "Add Expense",
       "short_name": "Expense",
       "description": "Quickly add a new expense",
       "url": "/?action=expense"
+    },
+    {
+      "name": "Add Income",
+      "short_name": "Income",
+      "description": "Quickly add income",
+      "url": "/?action=income"
     },
     {
       "name": "View Reports",
