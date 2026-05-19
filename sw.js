@@ -1,5 +1,5 @@
 /* MoneyFlow Service Worker - PWA Support */
-const CACHE_NAME = 'moneyflow-v3';
+const CACHE_NAME = 'moneyflow-v5';
 const ASSETS = [
   '/',
   '/index.html',
