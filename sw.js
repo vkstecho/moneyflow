@@ -1,79 +1,52 @@
-/* MoneyFlow Service Worker - PWA Support */
-const CACHE_NAME = 'moneyflow-v8';
+/* MoneyFlow service worker – basic offline shell */
+const CACHE = "moneyflow-v2";
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/assets/icon.jpeg'
+  "/",
+  "/index.html",
+  "/css/styles.css",
+  "/js/config.js",
+  "/js/constants.js",
+  "/js/auth.js",
+  "/js/data.js",
+  "/js/ui-core.js",
+  "/js/ui-itr.js",
+  "/js/export.js",
+  "/js/settings.js",
+  "/js/init.js",
+  "/manifest.json",
+  "/assets/icon.jpeg",
+  "/assets/logo.jpeg"
 ];
 
-// Install: cache essential files
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS).catch((err) => {
-        console.warn('Cache failed:', err);
-      });
-    })
+    caches.open(CACHE).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting())
   );
-  self.skipWaiting();
 });
 
-// Activate: clean old caches
-self.addEventListener('activate', (event) => {
+self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      );
-    })
+    caches.keys().then((keys) =>
+      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Fetch: network-first for HTML, cache-first for assets
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
-  
-  // Skip Firebase, Google APIs, and analytics
-  if (
-    url.hostname.includes('firebase') ||
-    url.hostname.includes('google') ||
-    url.hostname.includes('gstatic') ||
-    url.hostname.includes('cloudflare') ||
-    url.hostname.includes('jsdelivr') ||
-    url.hostname.includes('cdnjs')
-  ) {
-    return;
-  }
-
-  // Network first for HTML
-  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          return response;
-        })
-        .catch(() => caches.match(event.request).then((res) => res || caches.match('/index.html')))
-    );
-    return;
-  }
-
-  // Cache first for everything else
+  if (url.origin !== self.location.origin) return;
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      return (
-        cached ||
-        fetch(event.request).then((response) => {
-          if (response && response.status === 200 && response.type === 'basic') {
-            const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+      const fetchPromise = fetch(event.request)
+        .then((res) => {
+          if (res && res.status === 200 && event.request.method === "GET") {
+            const clone = res.clone();
+            caches.open(CACHE).then((cache) => cache.put(event.request, clone));
           }
-          return response;
+          return res;
         })
-      );
+        .catch(() => cached);
+      return cached || fetchPromise;
     })
   );
 });

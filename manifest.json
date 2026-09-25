@@ -1,48 +1,30 @@
 {
-  "id": "/?source=pwa",
-  "name": "MoneyFlow - Your Money, Your Control",
+  "name": "MoneyFlow - Track Your Money",
   "short_name": "MoneyFlow",
-  "description": "Personal finance tracker with smart categorization. Your Money, Your Control.",
+  "description": "Personal finance tracker with budgets, SMS import, statements and tax tools",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#F0F0F0",
-  "theme_color": "#3E277A",
-  "lang": "en-IN",
-  "dir": "ltr",
-  "categories": ["finance", "productivity", "utilities"],
+  "background_color": "#F4F6F9",
+  "theme_color": "#2E2060",
+  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "assets/icon-192.png",
+      "src": "assets/icon.jpeg",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/jpeg",
+      "purpose": "any maskable"
     },
     {
-      "src": "assets/icon-512.png",
+      "src": "assets/icon.jpeg",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "assets/screenshot.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow"
+      "type": "image/jpeg",
+      "purpose": "any maskable"
     }
   ],
   "share_target": {
     "action": "/?share=1",
     "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
     "params": {
       "title": "title",
       "text": "text",
@@ -53,21 +35,20 @@
     {
       "name": "Add Expense",
       "short_name": "Expense",
-      "description": "Quickly add a new expense",
-      "url": "/?action=expense"
+      "url": "/?action=expense",
+      "icons": [{ "src": "assets/icon.jpeg", "sizes": "192x192" }]
     },
     {
       "name": "Add Income",
       "short_name": "Income",
-      "description": "Quickly add income",
-      "url": "/?action=income"
+      "url": "/?action=income",
+      "icons": [{ "src": "assets/icon.jpeg", "sizes": "192x192" }]
     },
     {
-      "name": "View Reports",
+      "name": "Reports",
       "short_name": "Reports",
-      "description": "View spending reports",
-      "url": "/?action=reports"
+      "url": "/?action=reports",
+      "icons": [{ "src": "assets/icon.jpeg", "sizes": "192x192" }]
     }
-  ],
-  "prefer_related_applications": false
+  ]
 }

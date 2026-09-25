@@ -1,76 +1,92 @@
-# 💰 MoneyFlow
+# MoneyFlow
 
-> Track every rupee, effortlessly.
+Personal finance tracker (PWA) – expenses, income, budgets, Needs/Wants/Savings, multi-account, SMS share import, PDF statements, ITR tools.
 
-![MoneyFlow](assets/icon.jpeg)
+Modular static app ready for **GitHub Pages** or any static host.
 
-A beautiful, full-featured personal finance tracker that runs entirely in your browser — no server, no sign-ups, no data leaving your device.
-
-## ✨ Features
-
-- **🔐 Phone + OTP Login** — Secure authentication with simulated OTP (demo mode)
-- **🤚 Biometric Login** — Fingerprint/Face ID for returning users
-- **📊 Income vs Expense Tracking** — See your balance at a glance
-- **🎯 Budget Management** — Monthly + per-category budget limits with visual progress bars
-- **📈 Visual Charts** — Donut chart for categories, bar chart for 6-month trends
-- **👥 Split Bills** — Divide expenses among friends
-- **🔄 Recurring Bills** — Track subscriptions and monthly payments
-- **🔍 Search & Filter** — Find transactions by name, category, or type
-- **💾 Persistent Storage** — All data saved in localStorage across sessions
-- **📱 Mobile-First** — Responsive design optimized for phones
-
-## 🚀 Quick Start
-
-### Option 1: Open directly
-Just double-click `index.html` — it works in any modern browser.
-
-### Option 2: GitHub Pages
-1. Fork this repo
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, root folder
-4. Your app will be live at `https://yourusername.github.io/moneyflow/`
-
-### Option 3: Local server
-```bash
-# Python
-python -m http.server 8000
-
-# Node.js
-npx serve .
-```
-
-## 📁 Project Structure
+## Folder structure
 
 ```
 moneyflow/
-├── index.html          # Complete app (single file, zero dependencies)
-├── manifest.json       # PWA manifest for installability
+├── index.html              # HTML shell only
+├── css/
+│   └── styles.css          # All styles (~39 KB)
+├── js/
+│   ├── config.js           # Firebase + PDF logos
+│   ├── constants.js        # Categories, currencies, helpers
+│   ├── auth.js             # Login, OTP, PIN, biometric
+│   ├── data.js             # Storage, sync, accounts, goApp
+│   ├── ui-core.js          # Home, history, budgets, reports, modals
+│   ├── ui-itr.js           # Tax / earnings / cashback / HRA
+│   ├── export.js           # PDF statement + PDF/JSON import
+│   ├── settings.js         # Settings UI
+│   └── init.js             # Boot, SW, share-target, PWA install
 ├── assets/
-│   ├── icon.jpeg       # App icon (rounded)
-│   └── logo.jpeg       # Logo (splash screen)
-├── README.md
-├── LICENSE
-└── .gitignore
+│   ├── icon.jpeg
+│   ├── logo.jpeg
+│   ├── mf-logo-pdf.jpeg
+│   └── vks-logo-pdf.jpeg
+├── manifest.json           # PWA + share target + shortcuts
+├── sw.js                   # Offline shell cache
+└── README.md
 ```
 
-## 🛠️ Tech Stack
+## Benefits of the split
 
-- **Pure HTML/CSS/JS** — No React, no build tools, no npm
-- **localStorage** — For persistent data storage
-- **SVG Charts** — Hand-crafted donut & bar charts
-- **Google Fonts** — DM Sans + Playfair Display
-- **CSS Animations** — Smooth transitions and micro-interactions
+| Before | After |
+|--------|--------|
+| Single ~260 KB HTML | Small HTML + separate CSS/JS |
+| Any tweak re-downloads everything | Browser caches CSS & JS independently |
+| Hard to navigate | One concern per file |
 
-## 🎨 Design
+## Deploy to GitHub Pages
 
-Inspired by modern fintech apps like Axio, with a premium purple-gold color scheme and clean, card-based layout.
+1. Create a repo (e.g. `moneyflow`).
+2. Upload **everything inside** this `moneyflow/` folder to the **repo root** (or into `/docs`).
+3. GitHub → **Settings → Pages** → Source: branch `main`, folder `/` (or `/docs`).
+4. Visit `https://<you>.github.io/<repo>/`.
 
-## 📝 Notes
+### Git commands
 
-- **OTP is simulated** — The demo shows the OTP on screen. For production, integrate with Firebase Auth, Twilio, or MSG91
-- **Biometric is simulated** — Real biometric auth requires HTTPS + WebAuthn server
-- **Data is local** — Everything stays in your browser's localStorage. Clearing browser data will erase all records
+```bash
+cd moneyflow
+git init
+git add .
+git commit -m "MoneyFlow modular PWA"
+git branch -M main
+git remote add origin https://github.com/YOUR_USER/moneyflow.git
+git push -u origin main
+```
 
-## 📄 License
+## Local preview
 
-MIT License — free to use, modify, and distribute.
+```bash
+npx serve .
+# or
+python3 -m http.server 8080
+```
+
+Open `http://localhost:8080`.
+
+## Firebase notes
+
+Config is in `js/config.js`. For public repos:
+
+- Restrict the API key by HTTP referrer in Firebase Console.
+- Do not commit extra secrets.
+
+## Features
+
+- Phone OTP + Google sign-in · PIN / biometric
+- Transactions (expense / income / transfer) · tags · receipts
+- Multi-account balances
+- Budgets · Needs / Wants / Savings
+- Recurring bills · upcoming on Home
+- SMS share-target parsing
+- PDF statements · Axio-style PDF import · JSON backup
+- Dark mode · multi-currency
+- Private ITR / earnings / cashback / HRA section
+
+## License
+
+Use and modify for your projects. Keep attribution if redistributing publicly.
